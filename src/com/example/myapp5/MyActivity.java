@@ -99,6 +99,12 @@ public class MyActivity extends Activity implements View.OnClickListener {
                 managerAdapter.updateAlarmList(map);
                 updateTextView(managerAdapter.getAlarmStatus());
                 break;
+            case R.id.enablelist:
+                HashMap<String, Integer> map2 = new HashMap<String, Integer>();
+                map2.put("com.example.myapp5", AlarmManagerAdapter.POLICY_TRUSTED);
+                managerAdapter.updateAlarmList(map2);
+                updateTextView(managerAdapter.getAlarmStatus());
+                break;
             default:
                 break;
 
